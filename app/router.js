@@ -17,7 +17,7 @@ export const router = [
   {
     path: '#/cars',
     controller: CarsController,
-    view: CarsView
+    view: null //CarsView
   },
   {
     path: '#/homes',
@@ -27,6 +27,6 @@ export const router = [
   {
     path: '#/jobs',
     controller: JobsController,
-    view: JobsView
+    view: null //JobsView
   }
 ]
