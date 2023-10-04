@@ -1,25 +1,32 @@
-import { AboutController } from "./controllers/AboutController.js";
-import { HomeController } from "./controllers/HomeController.js";
-import { ValuesController } from "./controllers/ValuesController.js";
-import { AboutView } from "./views/AboutView.js";
+import { CarsController } from "./controllers/CarsController.js";
+import { HomePageController } from "./controllers/HomePageController.js";
+import { HomesController } from "./controllers/HomesController.js";
+import { JobsController } from "./controllers/JobsController.js";
+import { CarsView } from "./views/CarsView.js";
+import { HomePageView } from "./views/HomePageView.js";
+import { HomesView } from "./views/HomesView.js";
+import { JobsView } from "./views/JobsView.js";
 
 
 export const router = [
   {
     path: '',
-    controller: HomeController,
-    view: /*html*/`
-    <div class="card">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
-      </div>
-    </div>
-    `
+    controller: HomePageController,
+    view: HomePageView
   },
   {
-    path: '#/about',
-    controller: [AboutController, ValuesController],
-    view: AboutView
+    path: '#/cars',
+    controller: CarsController,
+    view: CarsView
+  },
+  {
+    path: '#/homes',
+    controller: HomesController,
+    view: HomesView
+  },
+  {
+    path: '#/jobs',
+    controller: JobsController,
+    view: JobsView
   }
 ]
